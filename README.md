@@ -1,24 +1,24 @@
-# Todo-App
+# Todo-App (Instruction)
 In this project, you will be developing a Todo app using the following tools and frameworks:
 
-VueJS
-Vuex (It is possible to replace vuex store with Firebase's realtime database completely. In that case, you don't need to use vuex.)
-Vue Router
-Vuetify
-Firebase
-You may add other libraries if you think you need them.
+VueJS <br>
+Vuex (It is possible to replace vuex store with Firebase's realtime database completely. In that case, you don't need to use vuex.)<br>
+Vue Router<br>
+Vuetify<br>
+Firebase<br>
+You may add other libraries if you think you need them.<br>
 
-In this todo list app, you will implement a todo list with sub-tasks.
+In this todo list app, you will implement a todo list with sub-tasks.<br>
 
-Here are the features that your app must have:
+Here are the features that your app must have:<br>
 
-User can self register using email/password/confirm-password or Google OAuth2.
-User can login using email/password or Google OAuth2.
-User can create a todo item.
-User can specify target complete date for todo item.
-User can mark a todo item as completed or done.
-The completed items can be:
-Shown on todo list - showing the item but style the completed items so that they can be distinguished from unfinished items
+User can self register using email/password/confirm-password or Google OAuth2.<br>
+User can login using email/password or Google OAuth2.<br>
+User can create a todo item.<br>
+User can specify target complete date for todo item.<br>
+User can mark a todo item as completed or done.<br>
+The completed items can be:<br>
+Shown on todo list - showing the item but style the completed items so that they can be distinguished from unfinished items<br>
 Hidden on todo list - the items will be hidden from the todo list be not deleted from the database. User can toggle show/hide completed items.
 Cleared from todo list - the completed items can be permanently removed from the database.
 Each todo item can have sub-tasks.
