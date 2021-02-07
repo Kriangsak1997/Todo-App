@@ -1344,10 +1344,10 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/eslint-config-airbnb@^5.0.2":
+"@vue/eslint-config-airbnb@^5.3.0":
   version "5.3.0"
-  resolved "https://registry.npm.taobao.org/@vue/eslint-config-airbnb/download/@vue/eslint-config-airbnb-5.3.0.tgz#896551d600816a06dff13fdd7d04fd5153379817"
-  integrity sha1-iWVR1gCBagbf8T/dfQT9UVM3mBc=
+  resolved "https://registry.yarnpkg.com/@vue/eslint-config-airbnb/-/eslint-config-airbnb-5.3.0.tgz#896551d600816a06dff13fdd7d04fd5153379817"
+  integrity sha512-m9ldRhbqaODbcc9mQZjPgnTzyNweZblLMTqMfC2kHWY68dYd3kwG/hvENeZWXJnKKo+eGnoptk+7Zq/c1519ZQ==
   dependencies:
     eslint-config-airbnb-base "^14.0.0"
     eslint-import-resolver-node "^0.3.4"
