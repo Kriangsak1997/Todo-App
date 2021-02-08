@@ -4,7 +4,7 @@ import router from './router';
 import store from './store';
 
 Vue.config.productionTip = false;
-
+// this is so frustratiing hellpkidasai
 new Vue({
   router,
   store,
