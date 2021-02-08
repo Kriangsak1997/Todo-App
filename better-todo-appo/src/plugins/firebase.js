@@ -1,5 +1,5 @@
 import firebase from 'firebase/app';
-// import store from '@/store/index';
+import store from '@/store/index';
 import 'firebase/auth';
 
 const firebaseConfig = {
@@ -13,3 +13,14 @@ const firebaseConfig = {
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+firebase.auth().onAuthStateChanged((user) => {
+  store.dispatch('fetchUser', user);
+});
+firebase.getCurrentUser = () => new Promise((resolve, reject) => {
+  const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+    unsubscribe();
+    resolve(user);
+  }, reject);
+});
+
+export default firebase;

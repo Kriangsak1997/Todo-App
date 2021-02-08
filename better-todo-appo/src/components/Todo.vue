@@ -1,14 +1,36 @@
 <template>
-<h1>Todo</h1>
+ <div id="todo">
+    <h1>Todo-doo-dos</h1>
+    <v-btn @click.prevent="logOut"> Log Out </v-btn>
+ </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+import firebase from 'firebase';
 
 export default {
   name: 'Todo',
-
-  data: () => ({
-    //
-  }),
+  computed: {
+    // map this.user to this.$store.getters.user
+    ...mapGetters({
+      user: 'user',
+    }),
+  },
+  methods: {
+    logOut() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.replace({
+            name: 'Login',
+          });
+        });
+    },
+  },
 };
 </script>
+<style scoped>
+
+</style>
