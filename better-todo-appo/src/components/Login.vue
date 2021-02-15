@@ -1,8 +1,8 @@
 /* eslint-disable vue/no-parsing-error */
 <template>
-<div id="app">
-  <v-app>
-    <v-content>
+<div id="appo">
+  <!-- <v-app> -->
+    <!-- <v-content> -->
       <v-container>
         <v-card class="mx-auto my-12 outer-card"
             max-width="374">
@@ -13,9 +13,9 @@
                  <h4>Welcome to Better-Todo</h4>
                </v-row>
              </v-card-title>
-             <v-card-actions>
+             <v-card-actions >
                <v-row justify="center" color="white">
-               <v-btn icon color="white">
+               <v-btn @click="googleLogin" icon color="white">
                  <v-icon>mdi-google-plus</v-icon>
                </v-btn>
                </v-row>
@@ -43,6 +43,8 @@
                 elevation="2"
                 type="error"
             >{{error}}</v-alert>
+            <v-btn to="/Register" normal text color="success">               REGISTER
+            </v-btn>
             <v-btn type="submit" normal text color="success">               Login
             </v-btn>
               </v-row>
@@ -50,8 +52,8 @@
           </v-form>
         </v-card>
       </v-container>
-    </v-content>
-  </v-app>
+    <!-- </v-content> -->
+  <!-- </v-app> -->
 </div>
 </template>
 
@@ -80,8 +82,18 @@ export default {
           this.error = 'Invalid password or email address';
         });
     },
-
+    googleLogin() {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      // eslint-disable-next-line no-unused-vars
+      firebase.auth().signInWithPopup(provider).then((data) => {
+        this.$store.dispatch('fetchUser', data);
+        this.$router.replace({ name: 'Todo' });
+      }).catch((err) => {
+        alert(`Error. ${err.message}`);
+      });
+    },
   },
+
 };
 </script>
 
