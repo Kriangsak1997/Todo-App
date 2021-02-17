@@ -32,9 +32,6 @@
                prepend-icon="mdi-lock-outline"
                color="purple" v-model="password"></v-text-field>
                </v-card-text>
-            </v-card-title>
-           <v-card-actions>
-            <v-row justify="center">
               <v-alert v-if="error"
                 border="left"
                 color="red"
@@ -43,11 +40,14 @@
                 elevation="2"
                 type="error"
             >{{error}}</v-alert>
-            <v-btn to="/Register" normal text color="success">               REGISTER
-            </v-btn>
+            </v-card-title>
+           <v-card-actions>
+            <v-row justify="center">
             <v-btn type="submit" normal text color="success">               Login
             </v-btn>
               </v-row>
+               <v-btn to="/Register" normal text color="success">                to rEGISTER
+            </v-btn>
            </v-card-actions>
           </v-form>
         </v-card>

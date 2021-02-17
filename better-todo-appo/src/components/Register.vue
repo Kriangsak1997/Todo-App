@@ -51,6 +51,8 @@
            <v-card-actions>
             <v-row justify="center">
             <v-btn normal text color="success" type="submit">               Register
+              </v-btn>
+            <v-btn to="/Login" normal text color="success">               To login
             </v-btn>
               </v-row>
            </v-card-actions>
